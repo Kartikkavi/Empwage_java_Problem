@@ -1,2 +1,0 @@
-# Welcome Employee wage Problems
-

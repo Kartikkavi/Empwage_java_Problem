@@ -1,5 +1,6 @@
-public class empwage {
+public class Empwage {
 	public static void main(String[] args) {
+
 
 
 		int ispresent=1;
