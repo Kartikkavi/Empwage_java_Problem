@@ -1,36 +1,41 @@
 public class Empwage {
- 	public static final int isfullTime = 1;
-        public static final int ispartTime = 2;
-        public static final int employeeRateperHr = 20;
-        public static final int NumWorkingDays = 2;
+	public static final double isfullTime = 1;
+	public static final double ispartTime = 2;
+	public static final double employeeRateperHr = 20;
+	public static final double NumWorkingDays = 2;
+        public static final double MaxHrinMonth= 10;
 
         public static void main(String[] args) {
 
-        int EmpHr=0;
-        int totalEmpwage=0;
+  	double totalworkinDays=0;
+	double totalEmpwge=0;
+	double totalEmpHr=0;
 
-        for (int totalworkinDays = 0; totalworkinDays < NumWorkingDays; totalworkinDays++)
-                      {
 
-                double empCheck=Math.floor(Math.random() *10) %3;
-                switch ((int) empCheck)
+ 		while(totalEmpHr <= MaxHrinMonth && totalworkinDays < NumWorkingDays ) {
+			double Emphr=0;
+                      totalworkinDays++;
+
+        double empCheck=Math.floor(Math.random() * 10) % 3;
+
+	        switch ((int) empCheck)
                         {
-                case isfullTime:
-                        EmpHr=8;
+		case 1:
+			Emphr=8;
+		break;
+
+		case 2:
+		        Emphr=4;
                 break;
 
-                case ispartTime:
-                        EmpHr=4;
-                break;
-
-                default:
-                        EmpHr=0;
-                        }
-                int empwage=(EmpHr*employeeRateperHr);
-                totalEmpwage += empwage;
-                System.out.println("Total Salary:" +empwage);
-                        }
-        System.out.println("Total Employee Wage:" +totalEmpwage);
-        }
-
+		default:
+			Emphr=0;
+			}
+	        	 totalEmpHr += Emphr;
+		        double empwage = Emphr * employeeRateperHr;
+			 totalEmpwge += empwage;
+			System.out.println("Emp wage:" +empwage);
+			}
+			System.out.println("Total Emp wage:" +totalEmpwge);
+		}
 }
